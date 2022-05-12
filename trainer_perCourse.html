@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trainer per Course</title>
+</head><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://bootswatch.com/4/yeti/bootstrap.min.css">
+  
+</head>
+<header>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark myStyleNavBar">
+        <a class="navbar-brand" href="index.html">Home</a>
+        <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                  Students
+                </a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="students.html">Add/Delete Student</a>
+                    <a class="dropdown-item" href="student_perCourse.html">Student per Course</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                  Trainers
+                </a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="trainers.html">Add/Delete Trainer</a>
+                    <a class="dropdown-item" href="trainer_perCourse.html">Trainer per Course</a>
+                </div>
+            </li>
+           
+            <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                    Assignments
+                    </a>
+                    <div class="dropdown-menu">
+                    <a class="dropdown-item" href="assignments.html">Add/Delete Assignment</a>
+                    <a class="dropdown-item" href="assignment_perCourse.html">Assignment per Course</a>
+                    <a class="dropdown-item" href="assignment_perStudent_perCourse.html">Assignment per Student per Course</a>
+                    </div>
+            </li>
+        </ul>
+    </nav>
+        </ul>
+    </div>
+    </nav>
+</header>
+<body>
+    <div class="container mt-4">
+        <h1 class="display-5 text-center">
+            <i class="fab fa-accusoft text-danger pr-2"></i>My<span class="text-danger">College</span>Website
+        </h1>
+        <br>
+        <h1 class="display-5 text-center bg-white"><i><strong>Trainer per Course</strong></i></h1>
+        <div class="col-lg-9">
+            
+            <form id="trainerpercourse-form" style="margin-top: 5%;">
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-sm-6 text-dark">
+                            <label><strong>Course</strong></label>
+                        </div>
+                        <div class="col-sm-6">   
+                            <select id="course" name="course">
+                                <option value="" disabled="disabled" selected="selected">Please Select a Course</option>
+                                <option value="javascript">Javascript</option>
+                                <option value="c">Python</option>
+                               
+                            </select>
+                        </div>    
+                    </div>
+                    <div class="row" id="trainerRow" style="margin-top: 5%;">
+                        <div class="col-sm-6 text-dark">
+                            <label><strong>Trainer</strong></label>
+                        </div>
+                        <div class="col-sm-6">   
+                            <select id="trainerSelect" name="trainerSelect">
+                                <option value="" disabled="disabled" selected="selected">Please Select a Trainer</option>
+                                <option value="addTrainer">+ Add a Trainer</option>
+                                <option value="LenaKapetanaki">Lena Kapetanaki</option>
+                                <option value="PanosBozas">Panos Bozas</option>
+                                <option value="GeorgePasparakis">George Pasparakis</option>
+                                
+                            </select>
+                        </div>
+                    </div>
+                </div>    
+            </form>
+            <form id="formTrainerAdd" style="margin-top: 5%; padding-left: 250px;">
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-sm-6 form-group">
+                            <label>First Name*</label>
+                            <input type="text" id="firstname" placeholder="Enter First Name Here.." class="form-control" required>
+                        </div>
+                        <div class="col-sm-6 form-group">
+                            <label>Last Name*</label>
+                            <input type="text" id="lastname" placeholder="Enter Last Name Here.." class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 form-group">
+                            <label>Birthdate*</label>
+                            <input type="date" name="birthdate" id="birthdate" class="form-control" min="1930-12-31" max="2010-12-31" required>
+                        </div>
+                    </div>					
+    
+                    <div class="row">
+                        
+                    </div>	
+                    <div class="row">					
+                        
+                        <div class="col-sm-6 form-group">
+                            <label>Main Subject*</label>
+                            <input type="text" id="subject" name="subject" placeholder="Enter Main Subject Here.." class="form-control">
+                        </div>
+                    </div>
+                   
+                 
+                    <input type="submit" value="Submit" class="btn btn-dark btn-block">
+                   
+                </div>				
+            </form>
+            <form id="formTrainerEdit" style="margin-top: 5%; padding-left: 250px;" >
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-sm-6 form-group">
+                            <label>First Name*</label>
+                            <input type="text" id="firstname" value="Lena" class="form-control" required>
+                        </div>
+                        <div class="col-sm-6 form-group">
+                            <label>Last Name*</label>
+                            <input type="text" id="lastname" value="Kapetanaki" class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 form-group">
+                            <label>Birthdate*</label>
+                            <input type="date" name="birthdate" id="birthdate" class="form-control" value="1998-11-12" min="1930-12-31" max="2010-12-31" required>
+                        </div>
+                    </div>		
+                    <div class="row">				
+                        <div class="col-sm-6 form-group">
+                            <label>Main Subject*</label>
+                            <input type="text" id="subject" name="subject" value="HTML-CSS" class="form-control">
+                        </div>
+                    </div>
+                    
+                    <input type="submit" value="Submit Changes" class="btn btn-dark btn-block">
+                </div>
+            </form>
+            <form id="formTrainerEdit2" style="margin-top: 5%; padding-left: 250px;" >
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-sm-6 form-group">
+                            <label>First Name*</label>
+                            <input type="text" id="firstname" value="Panos" class="form-control" required>
+                        </div>
+                        <div class="col-sm-6 form-group">
+                            <label>Last Name*</label>
+                            <input type="text" id="lastname" value="Bozas" class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 form-group">
+                            <label>Birthdate*</label>
+                            <input type="date" name="birthdate" id="birthdate" class="form-control" value="1988-11-12" min="1930-12-31" max="2010-12-31" required>
+                        </div>
+                    </div>		
+                    <div class="row">				
+                        <div class="col-sm-6 form-group">
+                            <label>Main Subject*</label>
+                            <input type="text" id="subject" name="subject" value="Javascript" class="form-control">
+                        </div>
+                    </div>
+                    
+                    <input type="submit" value="Submit Changes" class="btn btn-dark btn-block">
+                </div>
+            </form>
+            <form id="formTrainerEdit3" style="margin-top: 5%; padding-left: 250px;" >
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-sm-6 form-group">
+                            <label>First Name*</label>
+                            <input type="text" id="firstname" value="George" class="form-control" required>
+                        </div>
+                        <div class="col-sm-6 form-group">
+                            <label>Last Name*</label>
+                            <input type="text" id="lastname" value="Pasparakis" class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 form-group">
+                            <label>Birthdate*</label>
+                            <input type="date" name="birthdate" id="birthdate" class="form-control" value="1978-11-12" min="1930-12-31" max="2010-12-31" required>
+                        </div>
+                    </div>		
+                    <div class="row">				
+                        <div class="col-sm-6 form-group">
+                            <label>Main Subject*</label>
+                            <input type="text" id="subject" name="subject" value="Programming" class="form-control">
+                        </div>
+                    </div>
+                    
+                    <input type="submit" value="Submit Changes" class="btn btn-dark btn-block">
+                </div>
+            </form>
+
+    </div>
+</div>
+</div>
+<script src="scripttrainers.js"></script>
+<script src="https://kit.fontawesome.com/42fe1bd1b9.js" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="script_row.js"></script>
+</body>
+</html>

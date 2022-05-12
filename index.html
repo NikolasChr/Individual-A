@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://bootswatch.com/4/yeti/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/42fe1bd1b9.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+<header>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark myStyleNavBar">
+        <a class="navbar-brand" href="index.html">Home</a>
+        <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                  Students
+                </a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="students.html">Add/Delete Student</a>
+                    <a class="dropdown-item" href="student_perCourse.html">Student per Course</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                  Trainers
+                </a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="trainers.html">Add/Delete Trainer</a>
+                    <a class="dropdown-item" href="trainer_perCourse.html">Trainer per Course</a>
+                </div>
+            </li>
+           
+            <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                    Assignments
+                    </a>
+                    <div class="dropdown-menu">
+                    <a class="dropdown-item" href="assignments.html">Add/Delete Assignment</a>
+                    <a class="dropdown-item" href="assignment_perCourse.html">Assignment per Course</a>
+                    <a class="dropdown-item" href="assignment_perStudent_perCourse.html">Assignment per Student per Course</a>
+                    </div>
+            </li>
+        </ul>
+    
+        </ul>
+    </div>
+    </nav>
+</header>
+<body> 
+    <div class="container mt-4">
+        <h1 class="display-5 text-center">
+            <i class="fab fa-accusoft text-danger pr-2"></i>My<span class="text-danger">College</span>Website
+        </h1>
+        <h1 class="display-5 text-center bg-white"><i><strong>Courses</strong>
+        </i>
+       
+        </h1>
+       
+        <form  id="course-form">
+            <div class="form-group">
+                <label for="title"><strong>Title</strong></label>
+                <input type="text" id="title" class="form-control" placeholder="Course Title" value="" required>
+            </div>
+            <div class="form-group">
+                <label for="stream"><strong>Stream</strong></label>
+                <input type="text" id="stream" class="form-control" placeholder="Stream" value="" required>
+            </div>
+            <div class="form-group">
+                <label for="type"><strong>Type</strong></label>
+                <input type="text" id="type" class="form-control" placeholder="(Part-time - Full-time)" value="" required> 
+            </div>
+            <div class="form-group">        
+                <label for="startdate"><strong>Start Date</strong></label>
+                <input type="date" id="startdate" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="enddate"><strong>End Date</strong></label>
+                <input type="date" id="enddate" class="form-control" required>
+            </div>
+            <input type="submit" value="Submit my Course" class="btn btn-dark btn-block">
+        </form>
+        <table class="table table-striped mt-4">
+            <thead>
+                <tr> 
+                    <th>Title</th>
+                    <th>Stream</th>
+                    <th>Type</th>
+                    <th>StartDate</th>
+                    <th>EndDate</th>
+                   
+                    
+                </tr>
+            </thead>
+            <tbody id="course-list"></tbody>
+    </table>
+    </div>
+
+<script src="script.js"></script>
+</body>
+</html>

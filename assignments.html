@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignments</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://bootswatch.com/4/yeti/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/42fe1bd1b9.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark myStyleNavBar">
+        <a class="navbar-brand" href="index.html">Home</a>
+        <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                  Students
+                </a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="students.html">Add/Delete Student</a>
+                    <a class="dropdown-item" href="student_perCourse.html">Student per Course</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                  Trainers
+                </a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="trainers.html">Add/Delete Trainer</a>
+                    <a class="dropdown-item" href="trainer_perCourse.html">Trainer per Course</a>
+                </div>
+            </li>
+           
+            <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                    Assignments
+                    </a>
+                    <div class="dropdown-menu">
+                    <a class="dropdown-item" href="assignments.html">Add/Delete Assignment</a>
+                    <a class="dropdown-item" href="assignment_perCourse.html">Assignment per Course</a>
+                    <a class="dropdown-item" href="assignment_perStudent_perCourse.html">Assignment per Student per Course</a>
+                    </div>
+            </li>
+        </ul>
+    
+        </ul>
+    </div>
+    </nav>
+    <div class="container mt-4">
+        <h1 class="display-5 text-center">
+            <i class="fab fa-accusoft text-danger pr-2"></i>My<span class="text-danger">College</span>Website
+        </h1>
+        <h1 class="display-5 text-center bg-white"><i><strong>Assignments</strong></i></h1>
+        
+        <form  id="assignment-form">
+            <div class="form-group">
+                <label for="title"><strong>Title</strong></label>
+                <input type="text" id="title" class="form-control" placeholder="Enter the title of your Assignment" required>
+            </div>
+            <div class="form-group">
+                <label for="description"><strong>Description</strong></label>
+                <input type="text" id="description" class="form-control" placeholder="Describe the tools you are going to need" required>
+            </div>
+            <div class="form-group">
+                <label for="subdate"><strong>Sub.DateTime</strong></label>
+                <input type="date" id="subdate" class="form-control" placeholder="Sub Date Time" required> 
+            </div>
+            <div class="form-group">        
+                <label for="oralmark"><strong>Oral Mark</strong></label>
+                <input type="number" id="oralmark" class="form-control" placeholder="..." required>
+            </div>
+            <div class="form-group">
+                <label for="totalmark"><strong>Total Mark</strong></label>
+                <input type="number" id="totalmark" class="form-control" placeholder="100" value=100 required>
+            </div>
+           
+
+            <input type="submit" value="Submit the Assignment" class="btn btn-dark btn-block">
+        </form>
+        <table class="table table-striped mt-4">
+            <thead>
+                <tr> 
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Sub.DateTime</th>
+                    <th>Oral Mark</th>
+                    <th>Total Mark</th>
+                </tr>
+            </thead>
+            <tbody id="assignment-list"></tbody>
+    </table>
+    </div>
+    <script src="script4.js"></script>
+</body>
+</html>
